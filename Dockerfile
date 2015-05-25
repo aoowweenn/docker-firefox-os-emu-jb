@@ -21,5 +21,8 @@ RUN apt-get clean \
 	&& git clone git://github.com/mozilla-b2g/B2G.git
 RUN export SHELL=/bin/bash \
 	&& cd /home/B2G \
-	&& ./config.sh emulator-jb \
+	&& ./config.sh emulator-jb
+RUN export SHELL=/bin/bash \
+	&& cd /home/B2G \
+	&& ./repo sync \
 	&& ./build.sh
