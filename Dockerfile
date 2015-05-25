@@ -19,10 +19,5 @@ RUN apt-get clean \
 	&& git config --global user.name "abc" \
 	&& cd /home \
 	&& git clone git://github.com/mozilla-b2g/B2G.git
-RUN export SHELL=/bin/bash \
-	&& cd /home/B2G \
-	&& ./config.sh emulator-jb
-RUN export SHELL=/bin/bash \
-	&& cd /home/B2G \
-	&& ./repo sync \
-	&& ./build.sh
+CMD export SHELL=/bin/bash \
+	&& cd /home/B2G
