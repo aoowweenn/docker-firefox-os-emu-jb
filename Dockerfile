@@ -1,4 +1,4 @@
-FROM umw/trusty-jdk7
+FROM aoowweenn/trusty-jdk7
 MAINTAINER Owen Chien <aoowweenn@gmail.com>
 RUN dpkg --add-architecture i386 \
 	&& apt-get update
